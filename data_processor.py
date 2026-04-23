@@ -26,6 +26,26 @@ def load_data():
  
     return df
 
+def compute_kpis(df):
+    daily_trips = df.groupby("date").size()
+ 
+    avg_fare = df["fare_amount"].mean()
+ 
+    df["hour"] = df["tpep_pickup_datetime"].dt.hour
+    trips_by_hour = df.groupby("hour").size()
+ 
+    top_zones = df["PULocationID"].value_counts().head(5)
+ 
+    return {
+        "daily_trips": daily_trips,
+        "avg_fare": avg_fare,
+        "trips_by_hour": trips_by_hour,
+        "top_zones": top_zones
+    }
+
 if __name__=="__main__":
     df=load_data()
     print(df.head())
+
+    kpis = compute_kpis(df)
+    print("Avg Fare:", kpis["avg_fare"])
