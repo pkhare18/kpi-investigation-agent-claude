@@ -5,12 +5,12 @@ import matplotlib.pyplot as plt
  
 # Page config
 st.set_page_config(
-    page_title="KPI Investigation Agent",
+    page_title="AI powered KPI Investigation Agent",
     layout="wide"
 )
  
 # Title
-st.title("🚀 KPI Investigation Agent")
+st.title("🚀 AI powered KPI Investigation Agent")
  
 # Load Data Button
 if st.button("Load Data"):
