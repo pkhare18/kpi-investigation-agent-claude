@@ -1,7 +1,7 @@
-# 🚀 KPI Investigation Agent (Claude-powered)
+# 🚀 AI powered KPI Investigation Agent 
 
 A lightweight **data investigation agent** that analyzes KPI drops using
-**multi-step reasoning, tool execution, and Claude**.
+**multi-step reasoning, tool execution, and NVIDIA NIM (Llama 3)**.
 
 ------------------------------------------------------------------------
 
